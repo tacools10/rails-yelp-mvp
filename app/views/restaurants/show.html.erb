@@ -5,4 +5,12 @@
     <li> <%= @restaurant.phone_number %> </li>
     <li> <%= @restaurant.category %> </li>
   </ul>
+
+  <h2>Reviews</h2>
+  <ul style="list-style: none">
+    <% @restaurant.reviews.each do |review| %>
+    <li> <%= review.content %> </li>
+    <li> <%= review.rating %> </li>
+    <% end %>
+  </ul>
 </div>
